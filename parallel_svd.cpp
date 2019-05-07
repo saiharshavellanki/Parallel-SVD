@@ -59,7 +59,6 @@ int main (int argc, char* argv[]){
 		}
 	}
 
-
 	/* SVD using Jacobi algorithm (Parallel)*/
 
 	gettimeofday(&start, NULL);
@@ -207,6 +206,8 @@ int main (int argc, char* argv[]){
 		}
 		cout<<endl;
 	}
+
+	//At the end we need only U*S which can be U right after the algorithm because it is already U*S
 
 	return 0;
 }
