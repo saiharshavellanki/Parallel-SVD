@@ -81,9 +81,8 @@ int main (int argc, char* argv[]){
 					gamma = gamma + (U_t[i][k] * U_t[j][k]);
 				}
 
-				converge = max(converge, abs(gamma)/sqrt(alpha*beta));	//compute convergence
-				//basicaly is the angle
-				//between column i and j
+				//compute convergence which basicaly is the angle between column i and j
+				converge = max(converge, abs(gamma)/sqrt(alpha*beta));
 				if(gamma==0)
 				{
 					break;
@@ -141,14 +140,10 @@ int main (int argc, char* argv[]){
 
 	}
 
-
-
-
 	cout<<"iterations: "<<acum<<endl;
 	elapsedTime = (end.tv_sec - start.tv_sec) * 1000.0;
 	elapsedTime += (end.tv_usec - start.tv_usec) / 1000.0;
 	cout<<"Time: "<<elapsedTime<<" ms."<<endl<<endl;
-
 
 
 	cout<<"U"<<endl<<endl;
